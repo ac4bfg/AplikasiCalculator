@@ -12,8 +12,8 @@ namespace Hasil_Perhitungan
 {
     public partial class FrmProses : Form
     {
-        public delegate void CreateUpdateEventHandler(Calculator cal);
-        public event CreateUpdateEventHandler OnCreate;
+        public delegate void ProsesEventHandler(Calculator cal);
+        public event ProsesEventHandler OnProses;
         private bool isNewData = true;
         private Calculator cal;
 
@@ -57,7 +57,7 @@ namespace Hasil_Perhitungan
 
             if (isNewData)
             {
-                OnCreate(cal);
+                OnProses(cal);
             }
             else
             {

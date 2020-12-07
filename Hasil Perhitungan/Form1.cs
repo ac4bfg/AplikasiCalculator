@@ -17,14 +17,14 @@ namespace Hasil_Perhitungan
             InitializeComponent();
         }
 
-        private void FrmProses_OnCreate(Calculator cal)
+        private void FrmProses_OnProses(Calculator cal)
         {
             Hasil.Items.Add(cal.NilaiHasil);
         }
         private void btnHitung_Click(object sender, EventArgs e)
         {
             FrmProses frmProses = new FrmProses("Calculator");
-            frmProses.OnCreate += FrmProses_OnCreate;
+            frmProses.OnProses += FrmProses_OnProses;
             frmProses.ShowDialog();
         }
     }
